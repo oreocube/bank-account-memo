@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        tools:context=".AddMemoActivity">
+
+        <TextView
+            android:id="@+id/bankTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="12dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/bank"
+            android:textColor="#333333"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/selectBankBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/accountNicknameTextView"
+            android:layout_toRightOf="@+id/accountNicknameTextView"
+            android:layout_alignBaseline="@+id/bankTextView"
+            android:background="#00000000"
+            android:drawableRight="@drawable/ic_more"
+            android:gravity="start"
+            android:text="@string/select_bank"
+            android:textColor="#808080"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/accountNumberTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/selectBankBtn"
+            android:layout_margin="12dp"
+            android:text="@string/account_number"
+            android:textColor="#333333"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/accountNumberEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/accountNumberTextView"
+            android:layout_below="@+id/selectBankBtn"
+            android:layout_toEndOf="@+id/accountNicknameTextView"
+            android:layout_toRightOf="@id/accountNicknameTextView"
+            android:hint="@string/account_number"
+            android:inputType="number"
+            android:padding="18dp" />
+
+        <TextView
+            android:id="@+id/accountNicknameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/accountNumberEditText"
+            android:layout_margin="12dp"
+            android:text="@string/ba_nickname"
+            android:textColor="#333333"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/ba_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/accountNicknameTextView"
+            android:layout_below="@+id/accountNumberEditText"
+            android:layout_toEndOf="@+id/accountNicknameTextView"
+            android:layout_toRightOf="@+id/accountNicknameTextView"
+            android:hint="@string/ba_nickname"
+            android:inputType="text"
+            android:padding="18dp" />
+
+        <TextView
+            android:id="@+id/accountHolderTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ba_nickname"
+            android:layout_margin="12dp"
+            android:text="@string/account_holder"
+            android:textColor="#333333"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/accountHolderEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/accountHolderTextView"
+            android:layout_toRightOf="@+id/accountNicknameTextView"
+            android:layout_toEndOf="@+id/accountNicknameTextView"
+            android:layout_below="@+id/accountHolderTextView"
+            android:hint="@string/account_holder"
+            android:inputType="text"
+            android:padding="18dp" />
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/accountHolderEditText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="@string/save_btn" />
+
+
+    </RelativeLayout>
+
+</layout>

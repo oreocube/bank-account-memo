@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+        <variable
+            name="memoItem"
+            type="com.joo.bankmemo.model.Memo" />
+
+    </data>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="5dp"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/bankSymbol"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:contentDescription="@string/bank_symbol"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="0dp" />
+
+            <TextView
+                android:id="@+id/accountNickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_toEndOf="@id/bankSymbol"
+                android:layout_toRightOf="@id/bankSymbol"
+                android:text="@{memoItem.ba_nickname}"
+                android:textColor="#333333"
+                android:textSize="24sp"
+
+                />
+
+            <TextView
+                android:id="@+id/accountHolder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/accountNickname"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_toEndOf="@id/accountNickname"
+                android:layout_toRightOf="@id/accountNickname"
+                android:text="@{memoItem.account_holder}"
+                android:textColor="#808080"
+                android:textSize="18sp"
+
+                />
+
+            <TextView
+                android:id="@+id/bankName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/accountNickname"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_toEndOf="@id/bankSymbol"
+                android:layout_toRightOf="@id/bankSymbol"
+                android:text="@{memoItem.bank}"
+                android:textColor="#808080"
+                android:textSize="18sp"
+
+                />
+
+            <TextView
+                android:id="@+id/accountNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/bankName"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_toEndOf="@id/bankName"
+                android:layout_toRightOf="@id/bankName"
+                android:text="@{memoItem.account_number}"
+                android:textSize="18sp"
+
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/copyButton"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="#00000000"
+                    android:contentDescription="@string/copy_btn_description"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_copy" />
+
+                <ImageButton
+                    android:id="@+id/shareButton"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#00000000"
+                    android:contentDescription="@string/share_btn_description"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_share" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</layout>
+

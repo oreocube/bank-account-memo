@@ -5,7 +5,7 @@ import androidx.lifecycle.LiveData
 class Repository(mDatabase : MemoDatabase) {
 
     private val memoDao = mDatabase.memoDao()
-    val allMemo : LiveData<List<Memo>> = memoDao.getAllByID()
+    val allMemo : LiveData<List<Memo>> = memoDao.getAllByBankID()
 
     companion object {
         private var sInstance : Repository? = null

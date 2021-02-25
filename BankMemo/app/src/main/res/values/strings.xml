@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BankMemo</string>
+    <string name="app_name">계좌번호 메모장</string>
     <string name="bank_symbol">bank Symbol</string>
     <string name="ba_nickname">계좌 별칭</string>
     <string name="account_holder">예금주</string>
